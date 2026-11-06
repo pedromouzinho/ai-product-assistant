@@ -1,0 +1,226 @@
+name: Deploy — Azure Web App (manual)
+
+# Manual deploy of the API app and the background worker to Azure App Service
+# via Kudu zipdeploy. Configure these in the GitHub "production" environment:
+#   vars.MAIN_APP_URL / vars.MAIN_APP_SCM_URL      e.g. https://<app>.<region-host> / https://<app>.scm.<region-host>
+#   vars.WORKER_APP_URL / vars.WORKER_APP_SCM_URL
+#   secrets.MAIN_APP_PUBLISH_USER / MAIN_APP_PUBLISH_PASSWORD
+#   secrets.WORKER_APP_PUBLISH_USER / WORKER_APP_PUBLISH_PASSWORD
+# An OIDC / service-principal deploy (azure/webapps-deploy) is a drop-in alternative.
+
+on:
+  # push:
+  #   branches: [main]  # Re-enable after SCM access policy is decided
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  MAIN_APP_URL: ${{ vars.MAIN_APP_URL }}
+  MAIN_APP_SCM_URL: ${{ vars.MAIN_APP_SCM_URL }}
+  WORKER_APP_URL: ${{ vars.WORKER_APP_URL }}
+  WORKER_APP_SCM_URL: ${{ vars.WORKER_APP_SCM_URL }}
+
+jobs:
+  # ── Build artifact ──────────────────────────────────────────────
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Node dependencies and build frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Verify build output
+        run: |
+          test -f static/index.html
+          test -d static/dist/assets
+          echo "Frontend build OK"
+
+      - name: Run tests
+        env:
+          EVAL_MOCK_LLM: "true"
+          PYTHONPATH: "."
+        run: |
+          pip install -r requirements-dev.txt
+          python -m pytest tests/ -x --tb=short -q
+
+      - name: Create deploy package
+        run: |
+          zip -r deploy.zip . \
+            -x ".git/*" \
+            -x "node_modules/*" \
+            -x ".github/*" \
+            -x "tests/*" \
+            -x "*.pyc" \
+            -x "__pycache__/*" \
+            -x ".env*" \
+            -x ".deploy_*.zip"
+
+      - name: Upload deploy artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-package
+          path: deploy.zip
+          retention-days: 3
+
+  # ── Deploy main app ─────────────────────────────────────────────
+  deploy-main:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: deploy-package
+
+      - name: Deploy main app to production via Kudu zipdeploy
+        env:
+          KUDU_USER: ${{ secrets.MAIN_APP_PUBLISH_USER }}
+          KUDU_PASS: ${{ secrets.MAIN_APP_PUBLISH_PASSWORD }}
+        run: |
+          set -euo pipefail
+          AUTH="${KUDU_USER}:${KUDU_PASS}"
+          API="${{ env.MAIN_APP_SCM_URL }}/api/zipdeploy?isAsync=true"
+          RESPONSE_HEADERS=$(mktemp)
+          HTTP_CODE=$(curl -sS -D "$RESPONSE_HEADERS" -u "$AUTH" -X POST "$API" \
+            --data-binary @deploy.zip \
+            -H "Content-Type: application/zip" \
+            -o /dev/null \
+            -w "%{http_code}")
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "::error::Main zipdeploy request failed (status=$HTTP_CODE)"
+            cat "$RESPONSE_HEADERS"
+            rm -f "$RESPONSE_HEADERS"
+            exit 1
+          fi
+          LOCATION=$(grep -i '^Location:' "$RESPONSE_HEADERS" | awk '{print $2}' | tr -d '\r')
+          DEPLOY_ID=$(grep -i '^scm-deployment-id:' "$RESPONSE_HEADERS" | awk '{print $2}' | tr -d '\r')
+          rm -f "$RESPONSE_HEADERS"
+          if [ -z "$LOCATION" ] && [ -n "$DEPLOY_ID" ]; then
+            LOCATION="${{ env.MAIN_APP_SCM_URL }}/api/deployments/$DEPLOY_ID"
+          fi
+          if [ -z "$LOCATION" ]; then
+            LOCATION="${{ env.MAIN_APP_SCM_URL }}/api/deployments/latest"
+          fi
+          if [ -z "$LOCATION" ]; then
+            echo "::error::Unable to determine deployment status URL for main app"
+            exit 1
+          fi
+          echo "Polling main deployment status..."
+          for _ in $(seq 1 60); do
+            STATUS_JSON=$(curl -sS -u "$AUTH" "$LOCATION")
+            STATUS=$(echo "$STATUS_JSON" | jq -r '.status // empty')
+            if [ "$STATUS" = "4" ]; then
+              echo "Main deployment succeeded"
+              exit 0
+            fi
+            if [ "$STATUS" = "3" ]; then
+              echo "::error::Main deployment failed"
+              echo "$STATUS_JSON"
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "::error::Timed out waiting for main deployment"
+          exit 1
+
+      - name: Verify production
+        run: |
+          sleep 20
+          PROD_URL="${{ env.MAIN_APP_URL }}"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$PROD_URL/health" --max-time 30 || echo "000")
+          echo "Production health check: $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "::warning::Production health check returned $STATUS — may need manual verification"
+          fi
+
+  # ── Deploy worker app ───────────────────────────────────────────
+  deploy-worker:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: deploy-package
+
+      - name: Deploy worker app to production via Kudu zipdeploy
+        env:
+          KUDU_USER: ${{ secrets.WORKER_APP_PUBLISH_USER }}
+          KUDU_PASS: ${{ secrets.WORKER_APP_PUBLISH_PASSWORD }}
+        run: |
+          set -euo pipefail
+          AUTH="${KUDU_USER}:${KUDU_PASS}"
+          API="${{ env.WORKER_APP_SCM_URL }}/api/zipdeploy?isAsync=true"
+          RESPONSE_HEADERS=$(mktemp)
+          HTTP_CODE=$(curl -sS -D "$RESPONSE_HEADERS" -u "$AUTH" -X POST "$API" \
+            --data-binary @deploy.zip \
+            -H "Content-Type: application/zip" \
+            -o /dev/null \
+            -w "%{http_code}")
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "::error::Worker zipdeploy request failed (status=$HTTP_CODE)"
+            cat "$RESPONSE_HEADERS"
+            rm -f "$RESPONSE_HEADERS"
+            exit 1
+          fi
+          LOCATION=$(grep -i '^Location:' "$RESPONSE_HEADERS" | awk '{print $2}' | tr -d '\r')
+          DEPLOY_ID=$(grep -i '^scm-deployment-id:' "$RESPONSE_HEADERS" | awk '{print $2}' | tr -d '\r')
+          rm -f "$RESPONSE_HEADERS"
+          if [ -z "$LOCATION" ] && [ -n "$DEPLOY_ID" ]; then
+            LOCATION="${{ env.WORKER_APP_SCM_URL }}/api/deployments/$DEPLOY_ID"
+          fi
+          if [ -z "$LOCATION" ]; then
+            LOCATION="${{ env.WORKER_APP_SCM_URL }}/api/deployments/latest"
+          fi
+          if [ -z "$LOCATION" ]; then
+            echo "::error::Unable to determine deployment status URL for worker app"
+            exit 1
+          fi
+          echo "Polling worker deployment status..."
+          for _ in $(seq 1 60); do
+            STATUS_JSON=$(curl -sS -u "$AUTH" "$LOCATION")
+            STATUS=$(echo "$STATUS_JSON" | jq -r '.status // empty')
+            if [ "$STATUS" = "4" ]; then
+              echo "Worker deployment succeeded"
+              exit 0
+            fi
+            if [ "$STATUS" = "3" ]; then
+              echo "::error::Worker deployment failed"
+              echo "$STATUS_JSON"
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "::error::Timed out waiting for worker deployment"
+          exit 1
+
+      - name: Verify worker production
+        run: |
+          sleep 20
+          PROD_URL="${{ env.WORKER_APP_URL }}"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$PROD_URL/health" --max-time 30 || echo "000")
+          echo "Worker production health check: $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "::warning::Worker production health check returned $STATUS — may need manual verification"
+          fi

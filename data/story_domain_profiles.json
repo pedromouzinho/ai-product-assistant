@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "source": "synthetic",
+  "note": "SYNTHETIC SAMPLE DATA - fictional company 'Acme', no real work items.",
+  "entries": [
+    {
+      "domain": "Pagamentos",
+      "aliases": [
+        "payments",
+        "transferências"
+      ],
+      "design_file_title": "Acme Pagamentos Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0001/Acme-transfers",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Transferências",
+        "Recorrências"
+      ],
+      "top_flows": [
+        "Transferência SEPA",
+        "Recorrências"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Pagamentos requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    },
+    {
+      "domain": "Cartões",
+      "aliases": [
+        "cards",
+        "cartões virtuais"
+      ],
+      "design_file_title": "Acme Cartões Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0002/Acme-cards",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Cartões Virtuais",
+        "Limites"
+      ],
+      "top_flows": [
+        "Criar cartão",
+        "Definir limite"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Cartões requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    },
+    {
+      "domain": "Onboarding",
+      "aliases": [
+        "registo",
+        "signup"
+      ],
+      "design_file_title": "Acme Onboarding Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0003/Acme-onboarding",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Registo",
+        "Verificação"
+      ],
+      "top_flows": [
+        "Verificação de email"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Onboarding requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    },
+    {
+      "domain": "Dashboard",
+      "aliases": [
+        "home",
+        "resumo"
+      ],
+      "design_file_title": "Acme Dashboard Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0004/Acme-dashboard",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Agenda",
+        "Resumo de conta"
+      ],
+      "top_flows": [
+        "Agenda",
+        "Saldos"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Dashboard requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    },
+    {
+      "domain": "Documentos",
+      "aliases": [
+        "documentos digitais",
+        "upload"
+      ],
+      "design_file_title": "Acme Documentos Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0005/Acme-documents",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Documentos digitais"
+      ],
+      "top_flows": [
+        "Upload",
+        "Consulta digital"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Documentos requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    },
+    {
+      "domain": "Operações",
+      "aliases": [
+        "operações pendentes",
+        "assinatura digital"
+      ],
+      "design_file_title": "Acme Operações Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0006/Acme-operations",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Operações pendentes"
+      ],
+      "top_flows": [
+        "digitalSignature",
+        "Registo da operação"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Operações requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    },
+    {
+      "domain": "Autenticação",
+      "aliases": [
+        "login",
+        "credenciais"
+      ],
+      "design_file_title": "Acme Autenticação Flows",
+      "design_file_url": "https://www.figma.com/file/EXAMPLE0007/Acme-auth",
+      "top_title_patterns": [
+        "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]"
+      ],
+      "top_journeys": [
+        "Login",
+        "Credenciais"
+      ],
+      "top_flows": [
+        "Alterar credenciais",
+        "Recuperar acesso"
+      ],
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "routing_notes": [
+        "Use for Autenticação requests (synthetic)."
+      ],
+      "production_confidence": 0.7,
+      "coverage_score": 0.5,
+      "curated_example_count": 1
+    }
+  ]
+}

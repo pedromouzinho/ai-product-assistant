@@ -1,0 +1,221 @@
+{
+  "version": "sample",
+  "note": "SYNTHETIC SAMPLE DATA - fictional company 'Acme', no real work items.",
+  "entries": [
+    {
+      "id": "figma-transfers",
+      "domain": "Pagamentos",
+      "family": "Pagamentos",
+      "title": "Acme Pagamentos Flows",
+      "file_key": "EXAMPLE0001",
+      "url": "https://www.figma.com/file/EXAMPLE0001/Acme-transfers",
+      "status": "sample",
+      "preferred_rank": 1,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "payments",
+        "transferências"
+      ],
+      "journeys": [
+        "Transferências",
+        "Recorrências"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Pagamentos",
+      "routing_note": "Synthetic routing note for Pagamentos."
+    },
+    {
+      "id": "figma-cards",
+      "domain": "Cartões",
+      "family": "Cartões",
+      "title": "Acme Cartões Flows",
+      "file_key": "EXAMPLE0002",
+      "url": "https://www.figma.com/file/EXAMPLE0002/Acme-cards",
+      "status": "sample",
+      "preferred_rank": 2,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "cards",
+        "cartões virtuais"
+      ],
+      "journeys": [
+        "Cartões Virtuais",
+        "Limites"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Cartões",
+      "routing_note": "Synthetic routing note for Cartões."
+    },
+    {
+      "id": "figma-onboarding",
+      "domain": "Onboarding",
+      "family": "Onboarding",
+      "title": "Acme Onboarding Flows",
+      "file_key": "EXAMPLE0003",
+      "url": "https://www.figma.com/file/EXAMPLE0003/Acme-onboarding",
+      "status": "sample",
+      "preferred_rank": 3,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "registo",
+        "signup"
+      ],
+      "journeys": [
+        "Registo",
+        "Verificação"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Onboarding",
+      "routing_note": "Synthetic routing note for Onboarding."
+    },
+    {
+      "id": "figma-dashboard",
+      "domain": "Dashboard",
+      "family": "Dashboard",
+      "title": "Acme Dashboard Flows",
+      "file_key": "EXAMPLE0004",
+      "url": "https://www.figma.com/file/EXAMPLE0004/Acme-dashboard",
+      "status": "sample",
+      "preferred_rank": 4,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "home",
+        "resumo"
+      ],
+      "journeys": [
+        "Agenda",
+        "Resumo de conta"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Dashboard",
+      "routing_note": "Synthetic routing note for Dashboard."
+    },
+    {
+      "id": "figma-documents",
+      "domain": "Documentos",
+      "family": "Documentos",
+      "title": "Acme Documentos Flows",
+      "file_key": "EXAMPLE0005",
+      "url": "https://www.figma.com/file/EXAMPLE0005/Acme-documents",
+      "status": "sample",
+      "preferred_rank": 5,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "documentos digitais",
+        "upload"
+      ],
+      "journeys": [
+        "Documentos digitais"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Documentos",
+      "routing_note": "Synthetic routing note for Documentos."
+    },
+    {
+      "id": "figma-operations",
+      "domain": "Operações",
+      "family": "Operações",
+      "title": "Acme Operações Flows",
+      "file_key": "EXAMPLE0006",
+      "url": "https://www.figma.com/file/EXAMPLE0006/Acme-operations",
+      "status": "sample",
+      "preferred_rank": 6,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "operações pendentes",
+        "assinatura digital"
+      ],
+      "journeys": [
+        "Operações pendentes"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Operações",
+      "routing_note": "Synthetic routing note for Operações."
+    },
+    {
+      "id": "figma-auth",
+      "domain": "Autenticação",
+      "family": "Autenticação",
+      "title": "Acme Autenticação Flows",
+      "file_key": "EXAMPLE0007",
+      "url": "https://www.figma.com/file/EXAMPLE0007/Acme-auth",
+      "status": "sample",
+      "preferred_rank": 7,
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "curated_example_coverage": "low",
+      "last_touched_at": "2026-01-01T00:00:00+00:00",
+      "last_touched_by": "Jane Doe",
+      "creator": "Jane Doe",
+      "aliases": [
+        "login",
+        "credenciais"
+      ],
+      "journeys": [
+        "Login",
+        "Credenciais"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Card",
+        "Modal"
+      ],
+      "site_placement": "Portal > Autenticação",
+      "routing_note": "Synthetic routing note for Autenticação."
+    }
+  ]
+}

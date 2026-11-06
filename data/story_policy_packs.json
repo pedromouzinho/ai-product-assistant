@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "source": "synthetic",
+  "note": "SYNTHETIC SAMPLE DATA - fictional company 'Acme', no real work items.",
+  "entries": [
+    {
+      "id": "policy-transfers",
+      "domain": "Pagamentos",
+      "aliases": [
+        "payments",
+        "transferências"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Transferências",
+        "Recorrências"
+      ],
+      "top_flows": [
+        "Transferência SEPA",
+        "Recorrências"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Pagamentos Flows"
+    },
+    {
+      "id": "policy-cards",
+      "domain": "Cartões",
+      "aliases": [
+        "cards",
+        "cartões virtuais"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Cartões Virtuais",
+        "Limites"
+      ],
+      "top_flows": [
+        "Criar cartão",
+        "Definir limite"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Cartões Flows"
+    },
+    {
+      "id": "policy-onboarding",
+      "domain": "Onboarding",
+      "aliases": [
+        "registo",
+        "signup"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Registo",
+        "Verificação"
+      ],
+      "top_flows": [
+        "Verificação de email"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Onboarding Flows"
+    },
+    {
+      "id": "policy-dashboard",
+      "domain": "Dashboard",
+      "aliases": [
+        "home",
+        "resumo"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Agenda",
+        "Resumo de conta"
+      ],
+      "top_flows": [
+        "Agenda",
+        "Saldos"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Dashboard Flows"
+    },
+    {
+      "id": "policy-documents",
+      "domain": "Documentos",
+      "aliases": [
+        "documentos digitais",
+        "upload"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Documentos digitais"
+      ],
+      "top_flows": [
+        "Upload",
+        "Consulta digital"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Documentos Flows"
+    },
+    {
+      "id": "policy-operations",
+      "domain": "Operações",
+      "aliases": [
+        "operações pendentes",
+        "assinatura digital"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Operações pendentes"
+      ],
+      "top_flows": [
+        "digitalSignature",
+        "Registo da operação"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Operações Flows"
+    },
+    {
+      "id": "policy-auth",
+      "domain": "Autenticação",
+      "aliases": [
+        "login",
+        "credenciais"
+      ],
+      "language": "pt-PT",
+      "template_version": "v1",
+      "detail_level": "medium",
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "mandatory_sections": [
+        "business_goal",
+        "provenance",
+        "conditions",
+        "rules_constraints",
+        "acceptance_criteria",
+        "test_scenarios"
+      ],
+      "acceptance_style": "Bullets observáveis e testáveis",
+      "test_style": "Cenários positivos e negativos",
+      "preferred_lexicon": [
+        "CTA",
+        "Toast",
+        "Modal"
+      ],
+      "terminology_overrides": [
+        {
+          "from": "botão",
+          "to": "CTA",
+          "when": "Elemento de ação principal"
+        }
+      ],
+      "top_journeys": [
+        "Login",
+        "Credenciais"
+      ],
+      "top_flows": [
+        "Alterar credenciais",
+        "Recuperar acesso"
+      ],
+      "section_emphasis": [
+        "comportamento"
+      ],
+      "notes": [
+        "Synthetic policy pack."
+      ],
+      "coverage_score": 0.5,
+      "production_confidence": 0.7,
+      "curated_example_count": 1,
+      "design_file_title": "Acme Autenticação Flows"
+    }
+  ]
+}

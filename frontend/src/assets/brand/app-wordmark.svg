@@ -1,0 +1,5 @@
+<svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="12" fill="#4F46E5"/>
+  <path d="M14 34L22 14h4l8 20h-4.4l-1.7-4.6h-7.8L18.4 34H14zm7.4-8.2h5.2L24 18.8l-2.6 7z" fill="#FFFFFF"/>
+  <text x="60" y="31" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="700" fill="#171922">AI Product Assistant</text>
+</svg>

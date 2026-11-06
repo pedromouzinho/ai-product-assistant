@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "source": "synthetic",
+  "note": "SYNTHETIC SAMPLE DATA - fictional company 'Acme', no real work items.",
+  "entries": [
+    {
+      "feature_id": "9000",
+      "feature_title": "Transferências SEPA",
+      "feature_url": "",
+      "area_path": "AcmeProduct\\Digital\\Channels\\ACME",
+      "domain": "Pagamentos",
+      "journey": "Transferências",
+      "flow": "",
+      "aliases": [
+        "sepa",
+        "transferências"
+      ],
+      "top_ux_terms": [
+        "CTA",
+        "Input",
+        "Toast"
+      ],
+      "top_titles": [
+        "ACME | Pagamentos | Transferências | Transferência SEPA | Validação de IBAN"
+      ],
+      "top_flows": [
+        "Transferência SEPA"
+      ],
+      "top_journeys": [
+        "Transferências"
+      ],
+      "mandatory_sections": [
+        "Proveniência",
+        "Comportamento"
+      ],
+      "canonical_title_pattern": "ACME | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+      "story_count": 1,
+      "created_by_top": [
+        "Jane Doe"
+      ],
+      "notes": [
+        "Synthetic feature pack."
+      ],
+      "figma_url": "https://www.figma.com/file/EXAMPLE0001/Acme-transfers",
+      "stories": [
+        {
+          "id": "9001",
+          "title": "ACME | Pagamentos | Transferências | Transferência SEPA | Validação de IBAN",
+          "snippet": "Eu como cliente empresa , quero validar o IBAN antes de submeter , para que não existam transferências rejeitadas .",
+          "url": "",
+          "ux_terms": [
+            "CTA",
+            "Input",
+            "Toast"
+          ],
+          "workitem_refs": [],
+          "title_pattern": "[Prefix] | [Domínio] | [Jornada/Subárea] | [Fluxo/Step] | [Detalhe]",
+          "origin": "synthetic_sample"
+        }
+      ],
+      "source": "synthetic",
+      "source_generated_at": "2026-01-01T00:00:00+00:00"
+    }
+  ]
+}

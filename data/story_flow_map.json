@@ -1,0 +1,414 @@
+{
+  "version": 1,
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "source": "synthetic",
+  "note": "SYNTHETIC SAMPLE DATA - fictional company 'Acme', no real work items.",
+  "metadata": {
+    "count": 13
+  },
+  "entries": [
+    {
+      "id": "flow-transfers-1",
+      "dedupe_key": "transfers:1",
+      "source_kind": "figma_sample",
+      "domain": "Pagamentos",
+      "journey": "Transferências",
+      "flow": "Transferência SEPA",
+      "detail": "",
+      "title": "Acme Pagamentos Flows",
+      "file_key": "EXAMPLE0001",
+      "file_title": "Acme Pagamentos Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0001/Acme-transfers",
+      "site_placement": "Portal > Pagamentos > Transferências > Transferência SEPA",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "payments",
+        "transferências"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-transfers-2",
+      "dedupe_key": "transfers:2",
+      "source_kind": "figma_sample",
+      "domain": "Pagamentos",
+      "journey": "Recorrências",
+      "flow": "Recorrências",
+      "detail": "",
+      "title": "Acme Pagamentos Flows",
+      "file_key": "EXAMPLE0001",
+      "file_title": "Acme Pagamentos Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0001/Acme-transfers",
+      "site_placement": "Portal > Pagamentos > Recorrências > Recorrências",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "payments",
+        "transferências"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-cards-1",
+      "dedupe_key": "cards:1",
+      "source_kind": "figma_sample",
+      "domain": "Cartões",
+      "journey": "Cartões Virtuais",
+      "flow": "Criar cartão",
+      "detail": "",
+      "title": "Acme Cartões Flows",
+      "file_key": "EXAMPLE0002",
+      "file_title": "Acme Cartões Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0002/Acme-cards",
+      "site_placement": "Portal > Cartões > Cartões Virtuais > Criar cartão",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "cards",
+        "cartões virtuais"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-cards-2",
+      "dedupe_key": "cards:2",
+      "source_kind": "figma_sample",
+      "domain": "Cartões",
+      "journey": "Limites",
+      "flow": "Definir limite",
+      "detail": "",
+      "title": "Acme Cartões Flows",
+      "file_key": "EXAMPLE0002",
+      "file_title": "Acme Cartões Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0002/Acme-cards",
+      "site_placement": "Portal > Cartões > Limites > Definir limite",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "cards",
+        "cartões virtuais"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-onboarding-1",
+      "dedupe_key": "onboarding:1",
+      "source_kind": "figma_sample",
+      "domain": "Onboarding",
+      "journey": "Registo",
+      "flow": "Verificação de email",
+      "detail": "",
+      "title": "Acme Onboarding Flows",
+      "file_key": "EXAMPLE0003",
+      "file_title": "Acme Onboarding Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0003/Acme-onboarding",
+      "site_placement": "Portal > Onboarding > Registo > Verificação de email",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "registo",
+        "signup"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-dashboard-1",
+      "dedupe_key": "dashboard:1",
+      "source_kind": "figma_sample",
+      "domain": "Dashboard",
+      "journey": "Agenda",
+      "flow": "Agenda",
+      "detail": "",
+      "title": "Acme Dashboard Flows",
+      "file_key": "EXAMPLE0004",
+      "file_title": "Acme Dashboard Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0004/Acme-dashboard",
+      "site_placement": "Portal > Dashboard > Agenda > Agenda",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "home",
+        "resumo"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-dashboard-2",
+      "dedupe_key": "dashboard:2",
+      "source_kind": "figma_sample",
+      "domain": "Dashboard",
+      "journey": "Resumo de conta",
+      "flow": "Saldos",
+      "detail": "",
+      "title": "Acme Dashboard Flows",
+      "file_key": "EXAMPLE0004",
+      "file_title": "Acme Dashboard Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0004/Acme-dashboard",
+      "site_placement": "Portal > Dashboard > Resumo de conta > Saldos",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "home",
+        "resumo"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-documents-1",
+      "dedupe_key": "documents:1",
+      "source_kind": "figma_sample",
+      "domain": "Documentos",
+      "journey": "Documentos digitais",
+      "flow": "Upload",
+      "detail": "",
+      "title": "Acme Documentos Flows",
+      "file_key": "EXAMPLE0005",
+      "file_title": "Acme Documentos Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0005/Acme-documents",
+      "site_placement": "Portal > Documentos > Documentos digitais > Upload",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "documentos digitais",
+        "upload"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-documents-2",
+      "dedupe_key": "documents:2",
+      "source_kind": "figma_sample",
+      "domain": "Documentos",
+      "journey": "Documentos digitais",
+      "flow": "Consulta digital",
+      "detail": "",
+      "title": "Acme Documentos Flows",
+      "file_key": "EXAMPLE0005",
+      "file_title": "Acme Documentos Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0005/Acme-documents",
+      "site_placement": "Portal > Documentos > Documentos digitais > Consulta digital",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "documentos digitais",
+        "upload"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-operations-1",
+      "dedupe_key": "operations:1",
+      "source_kind": "figma_sample",
+      "domain": "Operações",
+      "journey": "Operações pendentes",
+      "flow": "digitalSignature",
+      "detail": "",
+      "title": "Acme Operações Flows",
+      "file_key": "EXAMPLE0006",
+      "file_title": "Acme Operações Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0006/Acme-operations",
+      "site_placement": "Portal > Operações > Operações pendentes > digitalSignature",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "operações pendentes",
+        "assinatura digital"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-operations-2",
+      "dedupe_key": "operations:2",
+      "source_kind": "figma_sample",
+      "domain": "Operações",
+      "journey": "Operações pendentes",
+      "flow": "Registo da operação",
+      "detail": "",
+      "title": "Acme Operações Flows",
+      "file_key": "EXAMPLE0006",
+      "file_title": "Acme Operações Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0006/Acme-operations",
+      "site_placement": "Portal > Operações > Operações pendentes > Registo da operação",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "operações pendentes",
+        "assinatura digital"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-auth-1",
+      "dedupe_key": "auth:1",
+      "source_kind": "figma_sample",
+      "domain": "Autenticação",
+      "journey": "Login",
+      "flow": "Alterar credenciais",
+      "detail": "",
+      "title": "Acme Autenticação Flows",
+      "file_key": "EXAMPLE0007",
+      "file_title": "Acme Autenticação Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0007/Acme-auth",
+      "site_placement": "Portal > Autenticação > Login > Alterar credenciais",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "login",
+        "credenciais"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    },
+    {
+      "id": "flow-auth-2",
+      "dedupe_key": "auth:2",
+      "source_kind": "figma_sample",
+      "domain": "Autenticação",
+      "journey": "Credenciais",
+      "flow": "Recuperar acesso",
+      "detail": "",
+      "title": "Acme Autenticação Flows",
+      "file_key": "EXAMPLE0007",
+      "file_title": "Acme Autenticação Flows",
+      "url": "https://www.figma.com/file/EXAMPLE0007/Acme-auth",
+      "site_placement": "Portal > Autenticação > Credenciais > Recuperar acesso",
+      "routing_note": "Synthetic flow entry.",
+      "aliases": [
+        "login",
+        "credenciais"
+      ],
+      "ui_components": [
+        "Card",
+        "Stepper"
+      ],
+      "ux_terms": [
+        "CTA",
+        "Toast"
+      ],
+      "currentness_score": 0.8,
+      "production_confidence": 0.7,
+      "quality_score": 0.6,
+      "source_work_item_id": ""
+    }
+  ]
+}
